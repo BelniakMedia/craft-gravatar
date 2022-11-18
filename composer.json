@@ -8,7 +8,8 @@
         "cms",
         "craftcms",
         "craft-plugin",
-        "gravatar"
+        "gravatar",
+        "twig"
     ],
     "support": {
         "docs": "https://github.com/BelniakMedia/craft-gravatar/blob/main/README.md",
