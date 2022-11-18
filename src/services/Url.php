@@ -1,23 +1,23 @@
 <?php
 /**
- * Gravatar plugin for Craft CMS 3.x
+ * Gravatar plugin for Craft CMS 4.x
  *
  * Adds gravatar support
  *
- * @link      https://github.com/noxify
- * @copyright Copyright (c) 2018 Marcus Reinhardt
+ * @link      https://github.com/BelniakMedia
+ * @copyright Copyright (c) 2022 Belniak Media, Inc.
  */
 
-namespace noxify\gravatar\services;
+namespace belniakmedia\gravatar\services;
 
 use Craft;
 use craft\base\Component;
 use craft\helpers\UrlHelper;
-use noxify\gravatar\Gravatar;
+use belniakmedia\gravatar\Gravatar;
 
 /**
- * @author    Marcus Reinhardt
- * @package   Gravatar
+ * @author    Belniak Media, Inc.
+ * @package   belniakmedia/craft-gravatar
  * @since     1.0.0
  */
 class Url extends Component
@@ -27,22 +27,18 @@ class Url extends Component
 
     /**
      * Get either a Gravatar URL or complete image tag for a specified email address.
-     *
      * @param string $email
      * @param array $criteria
-     * @param boolean $asImage
+     * @param array $attributes
      * @return string
      */
-    public function get($email, $criteria = array())
+    public function get(string $email, array $criteria = [], array $attributes = []): string
     {
-        $email_hash = md5( strtolower( trim( $email ) ) );
-        $url = Gravatar::$plugin->getSettings()->url.$email_hash;
+        $email_hash = md5(strtolower(trim($email)));
+        $url = Gravatar::$plugin->getSettings()->url . $email_hash;
         $default = ($criteria['d']) ?? Gravatar::$plugin->getSettings()->default;
         $size = ($criteria['s']) ?? Gravatar::$plugin->getSettings()->size;
         $rating = ($criteria['r']) ?? Gravatar::$plugin->getSettings()->rating;
-
-        $gravatar_url = UrlHelper::urlWithParams($url, ['s' => $size, 'r' => $rating, 'd' => $default]);
-
-        return $gravatar_url;
+        return UrlHelper::urlWithParams($url, ['s' => $size, 'r' => $rating, 'd' => $default]);
     }
 }

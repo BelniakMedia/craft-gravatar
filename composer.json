@@ -1,5 +1,5 @@
 {
-    "name": "noxify/gravatar",
+    "name": "belniakmedia/craft-gravatar",
     "description": "Adds gravatar support",
     "type": "craft-plugin",
     "version": "1.0.0",
@@ -11,22 +11,23 @@
         "gravatar"
     ],
     "support": {
-        "docs": "https://github.com/noxify/gravatar/blob/master/README.md",
-        "issues": "https://github.com/noxify/gravatar/issues"
+        "docs": "https://github.com/BelniakMedia/craft-gravatar/blob/main/README.md",
+        "issues": "https://github.com/BelniakMedia/craft-gravatar/issues"
     },
     "license": "MIT",
     "authors": [
         {
-            "name": "Marcus Reinhardt",
-            "homepage": "https://github.com/noxify"
+            "name": "Rick Kukiela",
+            "homepage": "https://github.com/BelniakMedia/craft-gravatar"
         }
     ],
     "require": {
-        "craftcms/cms": "^3.0.0-RC1"
+        "php": "^8.0.2",
+        "craftcms/cms": "^4.0.0"
     },
     "autoload": {
         "psr-4": {
-          "noxify\\gravatar\\": "src/"
+          "belniakmedia\\gravatar\\": "src/"
         }
     },
     "extra": {
@@ -34,11 +35,17 @@
         "handle": "gravatar",
         "hasCpSettings": true,
         "hasCpSection": false,
-        "changelogUrl": "https://raw.githubusercontent.com/noxify/gravatar/master/CHANGELOG.md",
+        "changelogUrl": "https://github.com/BelniakMedia/craft-gravatar/blob/main/CHANGELOG.md",
         "components": {
-            "url": "noxify\\gravatar\\services\\Url",
-            "img": "noxify\\gravatar\\services\\Img"
+            "url": "belniakmedia\\gravatar\\services\\Url",
+            "img": "belniakmedia\\gravatar\\services\\Img"
         },
-        "class": "noxify\\gravatar\\Gravatar"
+        "class": "belniakmedia\\gravatar\\Gravatar"
+    },
+    "config": {
+        "allow-plugins": {
+            "yiisoft/yii2-composer": true,
+            "craftcms/plugin-installer": true
+        }
     }
 }

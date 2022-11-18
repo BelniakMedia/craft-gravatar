@@ -1,22 +1,21 @@
 <?php
 /**
- * Gravatar plugin for Craft CMS 3.x
+ * Gravatar plugin for Craft CMS 4.x
  *
  * Adds gravatar support
  *
- * @link      https://github.com/noxify
- * @copyright Copyright (c) 2018 Marcus Reinhardt
+ * @link      https://github.com/BelniakMedia
+ * @copyright Copyright (c) 2022 Belniak Media, Inc.
  */
 
-namespace noxify\gravatar\variables;
+namespace belniakmedia\gravatar\variables;
 
-use Craft;
 use craft\helpers\Template;
-use noxify\gravatar\Gravatar;
+use belniakmedia\gravatar\Gravatar;
 
 /**
- * @author    Marcus Reinhardt
- * @package   Gravatar
+ * @author    Belniak Media, Inc.
+ * @package   belniakmedia/craft-gravatar
  * @since     1.0.0
  */
 class GravatarVariable
@@ -31,8 +30,8 @@ class GravatarVariable
      * @param array $criteria
      * @return string
      */
-    public function url($email, $criteria = array())
-	{
+    public function url(string $email, array $criteria = []): string
+    {
         return Template::raw(Gravatar::$plugin->url->get($email, $criteria));
     }
     
@@ -44,7 +43,7 @@ class GravatarVariable
      * @param array $attributes
      * @return string
      */
-    public function img($email, $criteria = array(), $attributes = array())
+    public function img(string $email, array $criteria = [], array $attributes = []): string
     {
         return Template::raw(Gravatar::$plugin->img->get($email, $criteria, $attributes));
     }

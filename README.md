@@ -1,37 +1,39 @@
-# Gravatar plugin for Craft CMS 3.x
+# Gravatar plugin for Craft CMS 4.x
 
-Adds gravatar support. 
+Adds gravatar support to CraftCMS twig templates.
+
+**This project is a fork of public archive [noxify/craft-gravatar](https://github.com/noxify/craft-gravatar), 
+which has been updated to be compatible with Craft4 and was created due
+to the "public archive" status of the forked repo.**
 
 ## Requirements
 
-This plugin requires Craft CMS 3.0.0-beta.23 or later.
+This plugin requires PHP8 & Craft CMS 4.0.0 or later.
 
 ## Installation
 
-To install the plugin, follow these instructions.
-
-1. Open your terminal and go to your Craft project:
-
-        cd /path/to/project
-
-2. Then tell Composer to load the plugin:
-
-        composer require noxify/gravatar
-
-3. In the Control Panel, go to Settings → Plugins and click the “Install” button for Gravatar.
+Install via the [CraftCMS Plugin Store](https://plugins.craftcms.com/)\
+Or on the command line (from the project root directory):
+```
+composer require belniakmedia/craft-gravatar
+php craft plugin/install
+```
 
 ## Configuring Gravatar
 
-The plugins allows you to configure the following settings directly from your CP:
+The plugins allows you to configure the following settings:
 
-* Gravatar URL ( `default: //gravatar.com/avatar/` )
-* Size ( `default: 80` )
-* Rating ( `default: mp` )
-* Default Avatar ( `default: mp` )
+**Directly from your CP:**
+
+> * Gravatar URL ( `default: //gravatar.com/avatar/` )
+> * Size ( `default: 80` )
+> * Rating ( `default: mp` )
+> * Default Avatar ( `default: mp` )
+
+**Via project config file:**
+> See `config.php` in the plugin root folder for more information.
 
 Detailed instructions what are the allowed values are defined here: https://de.gravatar.com/site/implement/images/
-
-Inside the plugin settings (and also in the `config.php`) you have also the detailed instructions and options.
 
 
 ## Using Gravatar
@@ -66,8 +68,4 @@ Inside the plugin settings (and also in the `config.php`) you have also the deta
 {{ craft.gravatar.img( 'hello@example.com', {'s': 120}, {'class' : 'useravatar'} ) }}
 ```
 
-
-
-## Gravatar Roadmap
-
-Brought to you by [Marcus Reinhardt](https://github.com/noxify)
+Brought to you by [Belniak Media](https://github.com/BelniakMedia)

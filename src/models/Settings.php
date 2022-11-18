@@ -1,57 +1,35 @@
 <?php
 /**
- * Gravatar plugin for Craft CMS 3.x
+ * Gravatar plugin for Craft CMS 4.x
  *
  * Adds gravatar support
  *
- * @link      https://github.com/noxify
- * @copyright Copyright (c) 2018 Marcus Reinhardt
+ * @link      https://github.com/BelniakMedia
+ * @copyright Copyright (c) 2022 Belniak Media, Inc.
  */
 
-namespace noxify\gravatar\models;
+namespace belniakmedia\gravatar\models;
 
-use noxify\gravatar\Gravatar;
-
-use Craft;
 use craft\base\Model;
 
 /**
- * @author    Marcus Reinhardt
- * @package   Gravatar
+ * @author    Belniak Media, Inc.
+ * @package   belniakmedia/craft-gravatar
  * @since     1.0.0
  */
 class Settings extends Model
 {
-    // Public Properties
-    // =========================================================================
 
-    /**
-     * @var string
-     */
-    public $url = '//www.gravatar.com/avatar/';
+    public string $url = '//www.gravatar.com/avatar/';
+    public string $size = '80';
+    public string $rating = 'g';
+    public string $default = 'mp';
 
-    /**
-     * @var string
-     */
-    public $size = '80';
-
-    /**
-     * @var string
-     */
-    public $rating = 'g';
-
-    /**
-     * @var string
-     */
-    public $default = 'mp';
-
-    // Public Methods
-    // =========================================================================
 
     /**
      * @inheritdoc
      */
-    public function rules()
+    public function rules(): array
     {
         return [
             ['url', 'string'],

@@ -1,11 +1,11 @@
 <?php
 /**
- * Gravatar plugin for Craft CMS 3.x
+ * Gravatar plugin for Craft CMS 4.x
  *
  * Adds gravatar support
  *
- * @link      https://github.com/noxify
- * @copyright Copyright (c) 2018 Marcus Reinhardt
+ * @link      https://github.com/BelniakMedia
+ * @copyright Copyright (c) 2022 Belniak Media, Inc.
  */
 
 /**

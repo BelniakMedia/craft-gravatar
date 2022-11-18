@@ -4,6 +4,7 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## 1.0.0 - 2018-05-30
+## 1.0.0 - 2022-11-18
 ### Added
-- Initial release
+- Initial release (forked from public archive [noxify/craft-gravatar](https://www.github.com/noxify/craft-gravatar))
+- Updated programming for php ^8.0.2 and CraftCMS ^4.0.0
