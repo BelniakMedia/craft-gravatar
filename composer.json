@@ -1,6 +1,6 @@
 {
     "name": "belniakmedia/craft-gravatar",
-    "description": "Adds gravatar support",
+    "description": "Adds gravatar support to twig templates (Direct replacement of noxify/craft-gravatar compatible with Craft4).",
     "type": "craft-plugin",
     "version": "1.0.0",
     "keywords": [
@@ -17,8 +17,8 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Rick Kukiela",
-            "homepage": "https://github.com/BelniakMedia/craft-gravatar"
+            "name": "Belniak Media Inc.",
+            "homepage": "https://www.belniakmedia.com"
         }
     ],
     "require": {
