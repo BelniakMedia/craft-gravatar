@@ -32,8 +32,8 @@
         }
     },
     "extra": {
-        "name": "Gravatar",
-        "handle": "gravatar",
+        "name": "Gravatar Twig",
+        "handle": "gravatar-twig",
         "hasCpSettings": true,
         "hasCpSection": false,
         "changelogUrl": "https://github.com/BelniakMedia/craft-gravatar/blob/main/CHANGELOG.md",
