@@ -58,7 +58,7 @@ class Gravatar extends Plugin
 
         Craft::info(
             Craft::t(
-                'gravatar',
+                'gravatar-twig',
                 '{name} plugin loaded',
                 ['name' => $this->name]
             ),
